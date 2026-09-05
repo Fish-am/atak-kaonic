@@ -51,31 +51,7 @@ Commands work in reverse — tapping a button in the ATAK plugin sends a CoT com
 - An Android phone running ATAK-CIV
 - Sub-GHz antennas on both Kaonics (869 MHz)
 
-## Kaonic Configuration
 
-Both Kaonics need to be configured before use. See `atak-plugin/README.md` for the full setup steps, or run these commands on each Kaonic via SSH:
-
-```bash
-# Set RNS_MODULE=1 and add 15 second startup delay
-mkdir -p /etc/systemd/system/kaonic-atak-bridge.service.d
-echo -e "[Service]\nEnvironment=\"RNS_MODULE=1\"\nExecStartPre=/bin/sleep 15" \
-  > /etc/systemd/system/kaonic-atak-bridge.service.d/override.conf
-systemctl daemon-reload && systemctl restart kaonic-atak-bridge
-
-# Bridge wlan0 to br0 so devices can connect to Kaonic WiFi
-cat > /etc/systemd/system/wlan0-bridge.service << 'EOF'
-[Unit]
-Description=Add wlan0 to br0 bridge
-After=network.target hostapd.service
-[Service]
-Type=oneshot
-ExecStart=/sbin/ip link set wlan0 master br0
-RemainAfterExit=yes
-[Install]
-WantedBy=multi-user.target
-EOF
-systemctl enable wlan0-bridge.service && systemctl start wlan0-bridge.service
-```
 
 ## Supported Commands (out of the box)
 
