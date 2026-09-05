@@ -17,19 +17,20 @@ On the vehicle side, a script reads the vehicle's position and broadcasts it as 
 Commands work in reverse — tapping a button in the ATAK plugin sends a CoT command packet, which travels through the mesh to the vehicle's Kaonic, gets rebroadcast locally, and a receiver script on the companion computer picks it up and calls the appropriate vehicle API.
 
 ## Repository Structure
-├── ros2/ # For vehicles running ROS 2 and MAVROS
-│ ├── README.md
-│ ├── atak_bridge.py # Position sender (ROS 2 / MAVROS version)
-│ └── command_receiver.py # Command receiver (ROS 2 / MAVROS version)
-│
-├── template/ # For any vehicle — no ROS 2 required
-│ ├── README.md
-│ ├── cot_sender_template.py # Position sender template
-│ └── command_receiver_template.py # Command receiver template
-│
-└── atak-plugin/ # Android ATAK plugin for the operator
-├── README.md
-└── dronesandorbs/ # Android Studio project
+
+    ros2/
+        atak_bridge.py
+        command_receiver.py
+        README.md
+
+    template/
+        cot_sender_template.py
+        command_receiver_template.py
+        README.md
+
+    atak-plugin/
+        dronesandorbs/
+        README.md
 
 
 ## Which Files Do I Use?
