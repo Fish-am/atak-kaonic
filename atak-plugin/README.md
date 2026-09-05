@@ -13,9 +13,10 @@ An ATAK plugin for displaying drone telemetry and sending high-level commands (A
 ### 1. Get the ATAK SDK
 
 Download `ATAK-CIV-5.5.0.7-SDK` from tak.gov and unzip it. Place the `dronesandorbs` plugin folder inside the SDK's `plugins/` directory:
-ATAK-CIV-5.5.0.7-SDK/
-└── plugins/
-└── dronesandorbs/ ← this folder
+
+    ATAK-CIV-5.5.0.7-SDK/
+        plugins/
+            dronesandorbs/
 
 
 ### 2. Open in Android Studio
