@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/droneCardRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#161B22"
+    android:padding="12dp"
+    android:layout_marginBottom="8dp"
+    android:gravity="center_vertical"
+    android:clickable="true"
+    android:focusable="true">
+
+    <!-- Status dot -->
+    <View
+        android:id="@+id/statusDot"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:background="#39FF88"
+        android:layout_marginEnd="12dp" />
+
+    <!-- Name + sub info -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/droneCallsign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ORB-01"
+            android:textColor="#E6EDF3"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/droneType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="blank · GPS-denied"
+            android:textColor="#8B949E"
+            android:textSize="11sp"
+            android:paddingTop="1dp" />
+    </LinearLayout>
+
+    <!-- Glance stat -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="end">
+
+        <TextView
+            android:id="@+id/droneBatteryGlance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="87%"
+            android:textColor="#39FF88"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BATT"
+            android:textColor="#8B949E"
+            android:textSize="9sp"
+            android:letterSpacing="0.1" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="›"
+        android:textColor="#8B949E"
+        android:textSize="22sp"
+        android:paddingStart="10dp" />
+
+</LinearLayout>
