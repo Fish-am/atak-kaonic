@@ -9,7 +9,7 @@ Use these templates to integrate any vehicle with ATAK via Kaonic 1S mesh radios
 
 ## How It Works
 
-Both scripts communicate over UDP multicast on `239.2.3.1:6969` — the same address ATAK uses natively. The Kaonic bridge picks up that traffic and relays it through the Sub-GHz mesh to the operator's Kaonic, which rebroadcasts it to the ATAK phone.
+Both scripts communicate over UDP multicast on `239.2.3.1:6969` its the same address ATAK uses natively. The Kaonic bridge picks up that traffic and relays it through the Sub-GHz mesh to the operator's Kaonic, which rebroadcasts it to the ATAK phone.
 
 ## Setup
 
